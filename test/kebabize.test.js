@@ -12,3 +12,7 @@ test("hiThereBruceWayne shuld be kebabized to hi-there-bruce-wayne", function() 
 test("myNameISJoe shuld be kebabized to my-name-i-s-joe", function() {
   expect(kebabize("myNameISJoe")).toEqual("my-name-i-s-joe");
 });
+
+test("MYNAMEISJOE shuld be kebabized to -m-y-n-a-m-e-i-s-j-o-e", function() {
+  expect(kebabize("MYNAMEISJOE")).toEqual("-m-y-n-a-m-e-i-s-j-o-e");
+});

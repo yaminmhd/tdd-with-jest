@@ -8,19 +8,24 @@ kebabize('camelsHave3Humps') // camels-have-humps
 */
 
 function kebabize(input) {
-    // var newStr = input.replace(/([A-Z])/g, '-$1').toLowerCase();
-    // return newStr;
+    //using regex
+    //replace CAPITAL letters with a '-'
+    //the regex captured will be placed in $1
+    //so we replace CAPITAL with '-$1'
+    var newStr = input.replace(/([A-Z])/g, '-$1').toLowerCase();
+    return newStr;
 
-    var array = [];
-    for(var i = 0; i<input.length;i++){
-      if(input.charAt(i) === input.charAt(i).toUpperCase()){
-        array.push('-');
-        array.push(input.charAt(i).toLowerCase());
-      }else{
-        array.push(input.charAt(i))
-      }
-    }
-    return array.join('');
+    //for loop method
+    // var array = [];
+    // for(var i = 0; i<input.length;i++){
+    //   if(input.charAt(i) === input.charAt(i).toUpperCase()){
+    //     array.push('-');
+    //     array.push(input.charAt(i).toLowerCase());
+    //   }else{
+    //     array.push(input.charAt(i))
+    //   }
+    // }
+    // return array.join('');
 }
 
 module.exports = kebabize
